@@ -5,7 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>OPencv With Javascript</title>
-    <script async src="JS/opencv.js"></script>
+    <script async src="js/opencv.js" onload="onOpenCvReady();" type="text/javascript"></script>
+
 </head>
 <body>
     <img id="input_image">
@@ -14,5 +15,44 @@
 
 
 </body>
+    <h1>Face Detection with OpenCV.js</h1>
+    <video id="videoElement" width="640" height="480" autoplay></video>
+    <canvas id="canvasElement" width="640" height="480"></canvas>
+
+    
     <script src="/index.js"></script>
+    <!-- <script>
+
+    
+// Create a video element to display the camera stream
+let videoElement = document.createElement("video");
+videoElement.autoplay = true;
+document.body.appendChild(videoElement);
+
+// Function to start the camera
+function startCamera() {
+  // Check if getUserMedia is supported by the browser
+  if (!navigator.mediaDevices || !navigator.mediaDevices.getUserMedia) {
+    console.log("getUserMedia is not supported");
+    return;
+  }
+
+  // Constraints for accessing the camera
+  const constraints = { video: true };
+
+  // Access the camera stream
+  navigator.mediaDevices.getUserMedia(constraints)
+    .then(function (stream) {
+      // Attach the camera stream to the video element
+      videoElement.srcObject = stream;
+    })
+    .catch(function (error) {
+      console.log("Error accessing camera:", error);
+    });
+}
+
+// Call the startCamera function to open the camera
+startCamera();
+
+    </script> -->
 </html>
